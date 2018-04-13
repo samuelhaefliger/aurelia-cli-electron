@@ -18,10 +18,10 @@ Thumbs.db
 # Ref: https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
 # Ref: https://github.com/github/gitignore/blob/master/Global/VisualStudioCode.gitignore
 .idea
-.vscode
 
 # Dependencies
 node_modules
 
 # Compiled files
+dist
 scripts
