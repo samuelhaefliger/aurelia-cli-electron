@@ -1,0 +1,6 @@
+<template>
+  <h1>Aurelia rocks!!</h1>
+  <input value.bind="message">
+  <button click.delegate="send()">Senden</button>
+  <p repeat.for="response of responses">${response}</p>
+</template>

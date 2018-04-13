@@ -1,0 +1,91 @@
+{
+  "name": "aurelia-cli-electron-skeleton",
+  "description": "An Aurelia electron application.",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "au build",
+    "watch": "au watch",
+    "pack-mac": "./node_modules/.bin/build --mac",
+    "pack-win": "./node_modules/.bin/build --win",
+    "pack-linux": "./node_modules/.bin/build --linux"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelhaefliger/aurelia-cli-electron.git"
+  },
+  "license": "MIT",
+  "build": {
+    "appId": "com.electron.aureliaapp",
+    "productName": "AureliaApp",
+    "files": [
+      "node_modules/**/*",
+      "scripts/**/*",
+      "index.html",
+      "main.js",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ]
+    }
+  },
+  "dependencies": {
+    "aurelia-bootstrapper": "^2.1.1",
+    "aurelia-animator-css": "^1.0.2",
+    "bluebird": "^3.4.1",
+    "requirejs": "^2.3.2",
+    "text": "github:requirejs/text#latest"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jasmine": "^2.2.0",
+    "@types/node": "^6.0.45",
+    "aurelia-cli": "^0.31.3",
+    "aurelia-testing": "^1.0.0-beta.3.0.1",
+    "aurelia-tools": "^1.0.0",
+    "browser-sync": "^2.13.0",
+    "connect-history-api-fallback": "^1.2.0",
+    "debounce": "^1.0.2",
+    "electron": "^1.8.4",
+    "electron-builder": "^20.8.1",
+    "event-stream": "^3.3.3",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-changed-in-place": "^2.0.3",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-tslint": "^5.0.0",
+    "gulp-typescript": "^3.1.4",
+    "gulp-watch": "^4.3.11",
+    "html-minifier": "^3.2.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-typescript-preprocessor": "^0.2.1",
+    "minimatch": "^3.0.2",
+    "through2": "^2.0.1",
+    "tslint": "^3.11.0",
+    "typescript": ">=1.9.0-dev || ^2.0.0",
+    "uglify-js": "^3.0.19",
+    "vinyl-fs": "^2.4.3"
+  }
+}
